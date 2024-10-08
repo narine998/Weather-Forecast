@@ -1,0 +1,22 @@
+$header_bg: rgb(84, 51, 101);
+
+%flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin buttonStyles($bgColor: #3498db, $hoverColor: #2980b9, $textColor) {
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: $textColor;
+  background-color: $bgColor;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: $hoverColor;
+  }
+}

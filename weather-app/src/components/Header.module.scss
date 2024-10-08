@@ -1,0 +1,31 @@
+@import "../styles/mixins.scss";
+
+.header {
+  width: 100%;
+  padding: 2rem;
+  background-color: $header_bg;
+  font-size: 1.6rem;
+  @extend %flex-container;
+  justify-content: space-between;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  form {
+    width: 60%;
+    margin: auto;
+    @extend %flex-container;
+    gap: 1rem;
+  }
+  input {
+    padding: 0.8rem 0.4rem;
+    border-radius: 0.3rem;
+    width: 40%;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    @include buttonStyles(#fff, rgb(227, 223, 223), #2c222d);
+    font-weight: bold;
+  }
+}
